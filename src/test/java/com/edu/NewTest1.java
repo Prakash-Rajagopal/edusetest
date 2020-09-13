@@ -18,10 +18,10 @@ public class NewTest1 {
   @BeforeMethod
   public void beforeMethod() {
 	  
-	    System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+	    System.setProperty("webdriver.chrome.driver", "chromedriver");
 	    driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.get("http://192.168.198.146:8090/sampleapp/");
+		driver.get("http://18.223.187.23:32768/sampleapp/");
   }
   
   @Test
