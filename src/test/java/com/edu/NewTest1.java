@@ -11,27 +11,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
-//added lines
-import org.openqa.selenium.chrome.ChromeOptions;
-//end
+
 public class NewTest1 {
 	
- // WebDriver driver;
-//for headless mode
-	    ChromeOptions options = new ChromeOptions();  
-	    //options.addArguments("window-size=1400,600");
-	    options.addArguments("--headless");
-	    options.addArguments("--no-sandbox");
-	    WebDriver driver=new ChromeDriver(options);
-	    options.addArguments("--headless");  
-	  //end
-  @BeforeMethod
+WebDriver driver;
+ @BeforeMethod
   public void beforeMethod() {
 	    System.setProperty("webdriver.chrome.driver", "//root//chromedriver");
-	    //System.setP//root//roperty("webdriver.chrome.driver", "//root//chromedriver");  
-	   
-	
-	    //driver = new ChromeDriver();
+	    driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.get("http://3.18.105.188:9080/sampleapp/");
   }
