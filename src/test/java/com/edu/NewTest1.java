@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.s    System.setProperty("webdriver.chrome.driver", "chromedriver");elenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
@@ -20,7 +20,8 @@ public class NewTest1 {
 // 
   @BeforeMethod
   public void beforeMethod() {
-	    System.setP//root//roperty("webdriver.chrome.driver", "//root//chromedriver");  
+	    System.setProperty("webdriver.chrome.driver", "//root//chromedriver");
+	    //System.setP//root//roperty("webdriver.chrome.driver", "//root//chromedriver");  
 	   //for headless mode
 	    ChromeOptions options = new ChromeOptions();  
 	    //options.addArguments("window-size=1400,600");
