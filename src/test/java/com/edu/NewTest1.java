@@ -17,12 +17,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class NewTest1 {
 	
  // WebDriver driver;
-// 
-  @BeforeMethod
-  public void beforeMethod() {
-	    System.setProperty("webdriver.chrome.driver", "//root//chromedriver");
-	    //System.setP//root//roperty("webdriver.chrome.driver", "//root//chromedriver");  
-	   //for headless mode
+//for headless mode
 	    ChromeOptions options = new ChromeOptions();  
 	    //options.addArguments("window-size=1400,600");
 	    options.addArguments("--headless");
@@ -30,6 +25,11 @@ public class NewTest1 {
 	    WebDriver driver=new ChromeDriver(options);
 	    options.addArguments("--headless");  
 	  //end
+  @BeforeMethod
+  public void beforeMethod() {
+	    System.setProperty("webdriver.chrome.driver", "//root//chromedriver");
+	    //System.setP//root//roperty("webdriver.chrome.driver", "//root//chromedriver");  
+	   
 	
 	    //driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
