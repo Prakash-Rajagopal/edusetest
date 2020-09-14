@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 //end
 public class NewTest1 {
 	
-  WebDriver driver;
+ // WebDriver driver;
 // 
   @BeforeMethod
   public void beforeMethod() {
