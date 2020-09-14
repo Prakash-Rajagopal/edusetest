@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
@@ -15,12 +16,18 @@ import org.testng.annotations.AfterMethod;
 public class NewTest1 {
 	
 WebDriver driver;
+ChromeOptions options;
+	
  @BeforeMethod
   public void beforeMethod() {
 	    System.setProperty("webdriver.chrome.driver", "chromedriver");
-	    driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.get("http://3.18.105.188:9080/sampleapp/");
+	    options = new ChromeOptions();
+	    options.addArguments("--headless");
+	    options.addArguments("--no-sandbox");
+	    driver=new ChromeDriver(options);
+	    options.addArguments("--headless");
+	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	    driver.get("http://3.16.155.21:9080/sampleapp/");
   }
   
   @Test
