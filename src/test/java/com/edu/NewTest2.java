@@ -7,17 +7,22 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
 public class NewTest2 {
 	WebDriver driver;
-
+        ChromeOptions options;
   @BeforeMethod
   public void launch() {
 	  
 	    System.setProperty("webdriver.chrome.driver", "chromedriver");
-	    driver = new ChromeDriver();
+	    options = new ChromeOptions();
+	    options.addArguments("--headless");
+	    options.addArguments("--no-sandbox");
+	    driver = new ChromeDriver(options);
+	    options.addArguments("--headless");
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	    driver.get("https://facebook.com");
 
