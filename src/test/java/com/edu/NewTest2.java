@@ -21,6 +21,7 @@ public class NewTest2 {
 	    options = new ChromeOptions();
 	    options.addArguments("--headless");
 	    options.addArguments("--no-sandbox");
+	    options.add_argument("--disable-setuid-sandbox")
 	    driver = new ChromeDriver(options);
 	    options.addArguments("--headless");
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
