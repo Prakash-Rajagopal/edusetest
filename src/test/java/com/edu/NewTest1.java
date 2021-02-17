@@ -20,7 +20,7 @@ ChromeOptions options;
 	
  @BeforeMethod
   public void beforeMethod() {
-	    System.setProperty("webdriver.chrome.driver", "chromedriver");
+	    System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 	    options = new ChromeOptions();
 	    options.addArguments("--headless");
 	    options.addArguments("--no-sandbox");
@@ -28,7 +28,7 @@ ChromeOptions options;
 	    driver=new ChromeDriver(options);
 	    options.addArguments("--headless");
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	    driver.get("http://18.224.6.204:32768//sampleapp/");
+	    driver.get("http://http://3.136.83.81:49153/sampleapp/");
   }
   
   @Test
