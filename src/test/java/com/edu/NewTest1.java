@@ -28,7 +28,7 @@ ChromeOptions options;
 	    driver=new ChromeDriver(options);
 	    options.addArguments("--headless");
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	    driver.get("http://http://3.136.83.81:49153/sampleapp/");
+	    driver.get("http://3.136.83.81:49153/sampleapp/");
   }
   
   @Test
