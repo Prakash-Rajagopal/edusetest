@@ -17,7 +17,7 @@ public class NewTest2 {
   @BeforeMethod
   public void launch() {
 	  
-	    System.setProperty("webdriver.chrome.driver", "chromedriver");
+	    System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 	    options = new ChromeOptions();
 	    options.addArguments("--headless");
 	    options.addArguments("--no-sandbox");
